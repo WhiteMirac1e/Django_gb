@@ -1,3 +1,8 @@
 
 INFO 2024-06-04 11:03:05,107 views 15772 19832 посещение страницы about в: 2024-06-04 11:03:05.107020
 INFO 2024-06-04 11:03:05,107 basehttp 15772 19832 "GET /about/ HTTP/1.1" 200 1542
+INFO 2024-06-10 11:35:12,024 autoreload 20304 10248 Watching for file changes with StatReloader
+INFO 2024-06-10 11:35:14,017 views 20304 13268 посещение страницы index в: 2024-06-10 11:35:14.017911
+INFO 2024-06-10 11:35:14,018 basehttp 20304 13268 "GET / HTTP/1.1" 200 1373
+WARNING 2024-06-10 11:35:14,203 log 20304 13268 Not Found: /favicon.ico
+WARNING 2024-06-10 11:35:14,204 basehttp 20304 13268 "GET /favicon.ico HTTP/1.1" 404 2441
