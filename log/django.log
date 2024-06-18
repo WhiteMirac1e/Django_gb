@@ -2000,3 +2000,270 @@ django.core.exceptions.FieldError: Unsupported lookup 'order_date' for ForeignKe
 ERROR 2024-06-18 14:13:57,579 basehttp 15904 6680 "GET /user_products/1/ HTTP/1.1" 500 118817
 INFO 2024-06-18 14:14:50,380 autoreload 15904 17508 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
 INFO 2024-06-18 14:14:50,839 autoreload 18072 2696 Watching for file changes with StatReloader
+INFO 2024-06-18 14:14:52,263 basehttp 18072 4732 "GET /user_products/1/ HTTP/1.1" 200 325
+INFO 2024-06-18 14:15:03,686 basehttp 18072 4732 "GET /user_products/1/ HTTP/1.1" 200 325
+INFO 2024-06-18 14:17:50,120 basehttp 18072 4732 "GET /user_products/1/ HTTP/1.1" 200 325
+WARNING 2024-06-18 14:19:23,783 log 18072 4732 Not Found: /user_products/
+WARNING 2024-06-18 14:19:23,784 basehttp 18072 4732 "GET /user_products/ HTTP/1.1" 404 2653
+INFO 2024-06-18 14:19:26,659 basehttp 18072 4732 "GET /user_products/2/ HTTP/1.1" 200 325
+INFO 2024-06-18 14:19:31,418 basehttp 18072 4732 "GET /user_products/3 HTTP/1.1" 301 0
+INFO 2024-06-18 14:19:31,427 basehttp 18072 18272 "GET /user_products/3/ HTTP/1.1" 200 325
+INFO 2024-06-18 14:19:35,596 basehttp 18072 18272 "GET /user_products/4 HTTP/1.1" 301 0
+INFO 2024-06-18 14:19:35,605 basehttp 18072 13672 "GET /user_products/4/ HTTP/1.1" 200 325
+INFO 2024-06-18 14:19:39,202 basehttp 18072 13672 "GET /user_products/10 HTTP/1.1" 301 0
+INFO 2024-06-18 14:19:39,211 basehttp 18072 14864 "GET /user_products/10/ HTTP/1.1" 200 325
+INFO 2024-06-18 15:04:08,163 autoreload 18072 2696 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\models.py changed, reloading.
+INFO 2024-06-18 15:04:08,716 autoreload 18944 12468 Watching for file changes with StatReloader
+INFO 2024-06-18 15:22:16,427 autoreload 18944 12468 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 15:22:16,943 autoreload 18156 3488 Watching for file changes with StatReloader
+INFO 2024-06-18 15:23:43,419 autoreload 18156 3488 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 15:23:43,912 autoreload 19428 9828 Watching for file changes with StatReloader
+INFO 2024-06-18 15:24:16,004 autoreload 19428 9828 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 15:24:16,500 autoreload 18348 9248 Watching for file changes with StatReloader
+INFO 2024-06-18 15:24:50,643 autoreload 18348 9248 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 15:24:51,156 autoreload 16048 15824 Watching for file changes with StatReloader
+INFO 2024-06-18 15:26:52,495 autoreload 16048 15824 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 15:26:52,972 autoreload 19452 6344 Watching for file changes with StatReloader
+INFO 2024-06-18 15:27:53,762 autoreload 19452 6344 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\urls.py changed, reloading.
+INFO 2024-06-18 15:27:54,278 autoreload 5848 7816 Watching for file changes with StatReloader
+INFO 2024-06-18 15:28:01,545 views 5848 19288 посещение страницы about в: 2024-06-18 15:28:01.545204
+INFO 2024-06-18 15:28:01,550 basehttp 5848 19288 "GET / HTTP/1.1" 200 742
+ERROR 2024-06-18 15:28:07,039 log 5848 19288 Internal Server Error: /user/add/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.user_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-06-18 15:28:07,040 basehttp 5848 19288 "GET /user/add/ HTTP/1.1" 500 66921
+ERROR 2024-06-18 16:02:35,230 log 5848 15484 Internal Server Error: /user/add/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.user_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-06-18 16:02:35,231 basehttp 5848 15484 "GET /user/add/ HTTP/1.1" 500 67058
+INFO 2024-06-18 16:03:14,483 views 5848 15484 посещение страницы about в: 2024-06-18 16:03:14.483621
+INFO 2024-06-18 16:03:14,485 basehttp 5848 15484 "GET / HTTP/1.1" 200 742
+INFO 2024-06-18 16:03:22,000 basehttp 5848 15484 "GET /user/add HTTP/1.1" 301 0
+ERROR 2024-06-18 16:03:22,019 log 5848 6780 Internal Server Error: /user/add/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.user_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-06-18 16:03:22,020 basehttp 5848 6780 "GET /user/add/ HTTP/1.1" 500 66921
+INFO 2024-06-18 16:04:34,982 autoreload 15620 18168 Watching for file changes with StatReloader
+ERROR 2024-06-18 16:04:37,576 log 15620 7264 Internal Server Error: /user/add/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.user_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-06-18 16:04:37,577 basehttp 15620 7264 "GET /user/add/ HTTP/1.1" 500 67058
+ERROR 2024-06-18 16:04:38,341 log 15620 7264 Internal Server Error: /user/add/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.user_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-06-18 16:04:38,342 basehttp 15620 7264 "GET /user/add/ HTTP/1.1" 500 67058
+ERROR 2024-06-18 16:04:39,622 log 15620 7264 Internal Server Error: /user/add/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.user_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-06-18 16:04:39,624 basehttp 15620 7264 "GET /user/add/ HTTP/1.1" 500 67058
+ERROR 2024-06-18 16:08:19,566 log 15620 7264 Internal Server Error: /user/add/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.user_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-06-18 16:08:19,567 basehttp 15620 7264 "GET /user/add/ HTTP/1.1" 500 67058
+ERROR 2024-06-18 16:08:20,186 log 15620 7264 Internal Server Error: /user/add/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.user_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-06-18 16:08:20,188 basehttp 15620 7264 "GET /user/add/ HTTP/1.1" 500 67058
+INFO 2024-06-18 16:09:55,634 autoreload 14524 18160 Watching for file changes with StatReloader
+INFO 2024-06-18 16:10:10,546 views 14524 13956 посещение страницы about в: 2024-06-18 16:10:10.546631
+INFO 2024-06-18 16:10:10,567 basehttp 14524 13956 "GET / HTTP/1.1" 200 742
+ERROR 2024-06-18 16:10:15,361 log 14524 13956 Internal Server Error: /user/add/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 204, in _get_response
+    self.check_response(response, callback)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 332, in check_response
+    raise ValueError(
+ValueError: The view myapp.views.user_form didn't return an HttpResponse object. It returned None instead.
+ERROR 2024-06-18 16:10:15,362 basehttp 14524 13956 "GET /user/add/ HTTP/1.1" 500 66921
+INFO 2024-06-18 16:10:50,565 autoreload 14524 18160 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 16:10:51,106 autoreload 18140 15752 Watching for file changes with StatReloader
+INFO 2024-06-18 16:10:58,033 basehttp 18140 10004 "GET /user/add/ HTTP/1.1" 200 510
+INFO 2024-06-18 16:14:34,921 basehttp 18140 10004 "GET /user/add/ HTTP/1.1" 200 728
+INFO 2024-06-18 16:16:09,235 basehttp 18140 10004 "POST /user/add/ HTTP/1.1" 200 855
+INFO 2024-06-18 16:16:13,396 views 18140 10004 Получили name='Иван', email='Alex@mail.ru', age=13.
+INFO 2024-06-18 16:16:13,399 basehttp 18140 10004 "POST /user/add/ HTTP/1.1" 200 777
+INFO 2024-06-18 16:22:53,487 autoreload 18140 15752 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\forms.py changed, reloading.
+INFO 2024-06-18 16:22:54,014 autoreload 3056 16996 Watching for file changes with StatReloader
+INFO 2024-06-18 16:23:37,388 autoreload 3056 16996 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\forms.py changed, reloading.
+INFO 2024-06-18 16:23:37,884 autoreload 17524 4464 Watching for file changes with StatReloader
+INFO 2024-06-18 16:24:30,485 autoreload 17524 4464 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\forms.py changed, reloading.
+INFO 2024-06-18 16:24:30,935 autoreload 9948 17548 Watching for file changes with StatReloader
+INFO 2024-06-18 16:28:02,639 autoreload 9948 17548 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 16:28:03,129 autoreload 11208 8728 Watching for file changes with StatReloader
+INFO 2024-06-18 16:28:38,238 autoreload 11208 8728 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 16:28:38,728 autoreload 8732 10004 Watching for file changes with StatReloader
+INFO 2024-06-18 16:28:58,531 autoreload 8732 10004 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\urls.py changed, reloading.
+INFO 2024-06-18 16:28:59,025 autoreload 10408 3488 Watching for file changes with StatReloader
+INFO 2024-06-18 16:29:20,822 autoreload 10408 3488 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\urls.py changed, reloading.
+INFO 2024-06-18 16:29:21,321 autoreload 14216 11840 Watching for file changes with StatReloader
+INFO 2024-06-18 16:31:26,705 autoreload 14216 11840 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\urls.py changed, reloading.
+INFO 2024-06-18 16:31:27,221 autoreload 10884 17464 Watching for file changes with StatReloader
+INFO 2024-06-18 16:31:44,589 autoreload 18076 10520 Watching for file changes with StatReloader
+INFO 2024-06-18 16:32:51,520 autoreload 18076 10520 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myproject\settings.py changed, reloading.
+INFO 2024-06-18 16:32:52,006 autoreload 17908 17184 Watching for file changes with StatReloader
+INFO 2024-06-18 16:33:01,300 views 17908 17420 посещение страницы about в: 2024-06-18 16:33:01.300384
+INFO 2024-06-18 16:33:01,304 basehttp 17908 17420 "GET / HTTP/1.1" 200 742
+INFO 2024-06-18 16:33:10,221 basehttp 17908 17420 "GET /upload HTTP/1.1" 301 0
+INFO 2024-06-18 16:33:10,247 basehttp 17908 12156 "GET /upload/ HTTP/1.1" 200 564
+INFO 2024-06-18 16:34:07,089 basehttp 17908 12156 "GET /upload/ HTTP/1.1" 200 555
+ERROR 2024-06-18 16:34:23,434 log 17908 12156 Internal Server Error: /upload/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py", line 60, in upload_image
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\forms.py", line 197, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\forms.py", line 192, in errors
+    self.full_clean()
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\forms.py", line 327, in full_clean
+    self._clean_fields()
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\forms.py", line 337, in _clean_fields
+    value = field.clean(value, bf.initial)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\fields.py", line 689, in clean
+    return super().clean(data)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\fields.py", line 204, in clean
+    value = self.to_python(value)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\fields.py", line 716, in to_python
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'
+ERROR 2024-06-18 16:34:23,437 basehttp 17908 12156 "POST /upload/ HTTP/1.1" 500 95813
+INFO 2024-06-18 16:40:21,871 autoreload 19212 17588 Watching for file changes with StatReloader
+INFO 2024-06-18 16:40:25,596 views 19212 8636 посещение страницы about в: 2024-06-18 16:40:25.596248
+INFO 2024-06-18 16:40:25,603 basehttp 19212 8636 "GET / HTTP/1.1" 200 742
+INFO 2024-06-18 16:40:36,135 basehttp 19212 8636 "GET /upload/ HTTP/1.1" 200 555
+ERROR 2024-06-18 16:40:55,213 log 19212 8636 Internal Server Error: /upload/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py", line 60, in upload_image
+    if form.is_valid():
+       ^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\forms.py", line 197, in is_valid
+    return self.is_bound and not self.errors
+                                 ^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\forms.py", line 192, in errors
+    self.full_clean()
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\forms.py", line 327, in full_clean
+    self._clean_fields()
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\forms.py", line 337, in _clean_fields
+    value = field.clean(value, bf.initial)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\fields.py", line 689, in clean
+    return super().clean(data)
+           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\fields.py", line 204, in clean
+    value = self.to_python(value)
+            ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\forms\fields.py", line 716, in to_python
+    from PIL import Image
+ModuleNotFoundError: No module named 'PIL'
+ERROR 2024-06-18 16:40:55,215 basehttp 19212 8636 "POST /upload/ HTTP/1.1" 500 95987
+INFO 2024-06-18 16:42:46,222 basehttp 19212 8636 "POST /upload/ HTTP/1.1" 200 555
+INFO 2024-06-18 16:42:51,277 basehttp 19212 8636 "POST /upload/ HTTP/1.1" 200 555
+INFO 2024-06-18 16:44:58,967 autoreload 19212 17588 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\models.py changed, reloading.
+INFO 2024-06-18 16:44:59,474 autoreload 17808 5308 Watching for file changes with StatReloader
+INFO 2024-06-18 16:46:19,028 autoreload 17808 5308 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\models.py changed, reloading.
+INFO 2024-06-18 16:46:19,485 autoreload 9940 14732 Watching for file changes with StatReloader
+INFO 2024-06-18 16:46:36,788 basehttp 9940 18352 "POST /upload/ HTTP/1.1" 200 555
+INFO 2024-06-18 16:50:27,775 autoreload 9940 14732 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 16:50:28,320 autoreload 1216 14248 Watching for file changes with StatReloader
+INFO 2024-06-18 16:52:31,651 autoreload 1216 14248 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 16:52:32,206 autoreload 18232 5232 Watching for file changes with StatReloader
+INFO 2024-06-18 16:52:58,076 autoreload 18232 5232 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 16:52:58,543 autoreload 15840 19124 Watching for file changes with StatReloader
+INFO 2024-06-18 16:54:23,887 autoreload 15840 19124 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 16:54:24,377 autoreload 19228 992 Watching for file changes with StatReloader
+INFO 2024-06-18 16:57:03,585 autoreload 19228 992 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-18 16:57:04,042 autoreload 16444 17516 Watching for file changes with StatReloader
+INFO 2024-06-18 17:03:16,848 autoreload 17764 11436 Watching for file changes with StatReloader
+INFO 2024-06-18 17:03:35,590 autoreload 18380 5304 Watching for file changes with StatReloader
+WARNING 2024-06-18 17:03:39,542 log 18380 3796 Not Found: /upload/
+WARNING 2024-06-18 17:03:39,543 basehttp 18380 3796 "POST /upload/ HTTP/1.1" 404 2633
+INFO 2024-06-18 17:03:41,320 views 18380 3796 посещение страницы about в: 2024-06-18 17:03:41.320021
+INFO 2024-06-18 17:03:41,324 basehttp 18380 3796 "GET / HTTP/1.1" 200 742
+INFO 2024-06-18 17:04:00,579 basehttp 18380 3796 "GET /user_products/2/ HTTP/1.1" 200 325
+WARNING 2024-06-18 17:04:07,623 log 18380 3796 Not Found: /user_products/
+WARNING 2024-06-18 17:04:07,624 basehttp 18380 3796 "GET /user_products/ HTTP/1.1" 404 2653
+INFO 2024-06-18 17:04:11,184 basehttp 18380 3796 "GET /user_products/6 HTTP/1.1" 301 0
+INFO 2024-06-18 17:04:11,195 basehttp 18380 7972 "GET /user_products/6/ HTTP/1.1" 200 325
+INFO 2024-06-18 17:05:34,678 basehttp 18380 7972 "GET /user_products/6/ HTTP/1.1" 200 1446
+INFO 2024-06-18 17:06:00,828 basehttp 18380 7972 "POST /user_products/6/ HTTP/1.1" 302 0
+INFO 2024-06-18 17:06:00,841 basehttp 18380 7972 "GET /user_products/6/ HTTP/1.1" 200 1446
+INFO 2024-06-18 17:07:03,907 autoreload 18380 5304 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\models.py changed, reloading.
+INFO 2024-06-18 17:07:04,411 autoreload 2464 14084 Watching for file changes with StatReloader
+INFO 2024-06-18 17:07:04,877 basehttp 2464 14932 "GET /user_products/6/ HTTP/1.1" 200 1446
+INFO 2024-06-18 17:07:20,423 basehttp 2464 14932 "POST /user_products/6/ HTTP/1.1" 302 0
+INFO 2024-06-18 17:07:20,435 basehttp 2464 14932 "GET /user_products/6/ HTTP/1.1" 200 1446

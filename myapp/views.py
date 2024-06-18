@@ -1,10 +1,12 @@
 import logging
 from datetime import datetime, date, timedelta, timezone
 
+from django.core.files.storage import FileSystemStorage
 from django.db.models import Sum, F
-from django.shortcuts import render, get_object_or_404
+from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 
+from myapp.forms import ProductForm
 from myapp.models import User, Product, Order
 
 logger = logging.getLogger(__name__)
@@ -32,11 +34,29 @@ def user_products(request, user_id):
     last_365_days = datetime.now() - timedelta(days=365)
     user_order_365 = Product.objects.filter(order__customer=user, order__date__gte=last_365_days).distinct()
 
-    return render(request, "myapp/user_products.html", {
+    all_product = Product.objects.all()
+
+    if request.method == 'POST':
+        product_form = ProductForm(request.POST, request.FILES)
+        if product_form.is_valid():
+            new_product = product_form.save()
+
+            return redirect('user_products', user_id=user.id)
+    else:
+        product_form = ProductForm()
+
+    context = {
+        'user': user,
         'user_order_7': user_order_7,
         'user_order_30': user_order_30,
         'user_order_365': user_order_365,
-    })
+        'all_product': all_product,
+        'product_form': product_form,
+    }
+    return render(request, "myapp/user_products.html", context)
+
+
+
 
 # def user_products(request, customer_id, days_history):
 #     customer = get_object_or_404(User, pk=customer_id)

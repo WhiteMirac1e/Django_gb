@@ -20,6 +20,7 @@ class Product(models.Model):
     price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name=' Цена товара')
     count = models.IntegerField(verbose_name='Количество товара')
     date = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавленяе товара')
+    photo = models.ImageField(upload_to='products_photo/', null=True, blank=True)
 
     def __str__(self):
         return f'Name is {self.name}'
