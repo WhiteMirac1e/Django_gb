@@ -22,4 +22,19 @@
       <li>{{ product.name }} - {{ product.price }}</li>
     {% endfor %}
   </ul>
+
+  <h2>All Products</h2>
+<ul>
+    {% for product in all_products %}
+        <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+</ul>
+
+  <h2>Add Product</h2>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{ product_form.as_p }}
+    <button type="submit">Add Product</button>
+</form>
+
 {% endblock %}
