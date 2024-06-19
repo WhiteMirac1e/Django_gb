@@ -1,112 +1,67 @@
 import logging
-from datetime import datetime
+from datetime import datetime, date, timedelta, timezone
 
-from django.shortcuts import render
+from django.db.models import Sum, F
+from django.shortcuts import render, get_object_or_404
 from django.http import HttpResponse
+
+from myapp.models import User, Product, Order
 
 logger = logging.getLogger(__name__)
 
 
 def index(request):
-    html = """
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Мой первый Django-сайт</title>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    line-height: 1.5;
-                    margin: 0;
-                    padding: 20px;
-                }
-
-                h1 {
-                    color: #333;
-                }
-
-                p {
-                    color: #777;
-                }
-            </style>
-        </head>
-        <body>
-            <h1>Добро пожаловать на мой первый Django-сайт!</h1>
-
-            <h2>О сайте</h2>
-            <p>Этот сайт разработан с использованием Django, мощного фреймворка для создания веб-приложений на языке Python. Здесь я могу создавать и отображать различные страницы и данные в удобном формате.</p>
-
-            <h2>Обо мне</h2>
-            <p>Привет, меня зовут Коннов Иван. Я являюсь начинающим разработчиком.</p>
-
-        </body>
-        </html>
-        """
-    logger.info(f'посещение страницы index в: {datetime.now()}')
-    return HttpResponse(html)
+    logger.info(f'посещение страницы about в: {datetime.now()}')
+    return render(request, "myapp/index.html")
 
 
 def about(request):
-    html = """<!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Обо мне</title>
-    </head>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                    line-height: 1.5;
-                    margin: 0;
-                    padding: 20px;
-                }
-
-                h1 {
-                    color: #333;
-                }
-
-                p {
-                    color: #777;
-                }
-            </style>
-    <body>
-        <header>
-            <h1>Привет! Я Иван</h1>
-        </header>
-
-        <main>
-            <section>
-                <h2>Опыт работы</h2>
-                <ul>
-                    <li>Место работы 1</li>
-                    <li>Место работы 2</li>
-                    <li>Место работы 3</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Образование</h2>
-                <ul>
-                    <li>Университет 1</li>
-                    <li>Университет 2</li>
-                </ul>
-            </section>
-
-            <section>
-                <h2>Навыки</h2>
-                <ul>
-                    <li>Навык 1</li>
-                    <li>Навык 2</li>
-                    <li>Навык 3</li>
-                </ul>
-            </section>
-        </main>
-
-    </body>
-    </html>
-    """
     logger.info(f'посещение страницы about в: {datetime.now()}')
-    return HttpResponse(html)
+    return render(request, "myapp/about.html")
+
+
+def user_products(request, user_id):
+    user = User.objects.get(pk=user_id)
+
+    last_7_days = datetime.now() - timedelta(days=7)
+    user_order_7 = Product.objects.filter(order__customer=user, order__date__gte=last_7_days).distinct()
+
+    last_30_days = datetime.now() - timedelta(days=30)
+    user_order_30 = Product.objects.filter(order__customer=user, order__date__gte=last_30_days).distinct()
+
+    last_365_days = datetime.now() - timedelta(days=365)
+    user_order_365 = Product.objects.filter(order__customer=user, order__date__gte=last_365_days).distinct()
+
+    return render(request, "myapp/user_products.html", {
+        'user_order_7': user_order_7,
+        'user_order_30': user_order_30,
+        'user_order_365': user_order_365,
+    })
+
+# def user_products(request, customer_id, days_history):
+#     customer = get_object_or_404(User, pk=customer_id)
+#     date_start = date.today() - timedelta(days=days_history)
+#     products = OrderProducts.objects.select_related('product').select_related('orders').filter(
+#         order__date__gte=date_start, order__customer_id=customer_id)
+#     products = products.values('product__name', 'product__price').annotate(count_prod=Sum('product_count'))
+#     products = products.annotate(cost=F('product__price') * F('count_prod'))
+#
+#     context = {
+#         'client_name': customer.name,
+#         'period': period(days_history),
+#         'products': products
+#     }
+#
+#     return render(request, 'myapp/user_products.html', context)
+#
+#
+# def period(days: int) -> str:
+#     """Период отчетности."""
+#     match days:
+#         case 7:
+#             return 'за последнюю неделю'
+#         case 30:
+#             return 'за последний месяц'
+#         case 365:
+#             return 'за последний год'
+#     return 'за произвольный период'

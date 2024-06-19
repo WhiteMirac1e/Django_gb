@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block title %}{% endblock %}
+
+{% block content %}
+ <h2>За последние 7 дней (неделю)</h2>
+  <ul>
+    {% for product in user_order_7 %}
+      <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>За последние 30 дней (месяц)</h2>
+  <ul>
+    {% for product in user_order_30 %}
+      <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+  </ul>
+
+  <h2>За последние 365 дней (год)</h2>
+  <ul>
+    {% for product in user_order_365 %}
+      <li>{{ product.name }} - {{ product.price }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}
