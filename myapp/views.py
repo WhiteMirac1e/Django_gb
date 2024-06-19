@@ -6,7 +6,7 @@ from django.db.models import Sum, F
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
 
-from myapp.forms import ProductForm
+from myapp.forms import ProductForm, ImageForm
 from myapp.models import User, Product, Order
 
 logger = logging.getLogger(__name__)
@@ -37,13 +37,7 @@ def user_products(request, user_id):
     all_product = Product.objects.all()
 
     if request.method == 'POST':
-        product_form = ProductForm(request.POST, request.FILES)
-        if product_form.is_valid():
-            new_product = product_form.save()
-
-            return redirect('user_products', user_id=user.id)
-    else:
-        product_form = ProductForm()
+        return redirect('upload_image', user_id=user.id)
 
     context = {
         'user': user,
@@ -51,12 +45,20 @@ def user_products(request, user_id):
         'user_order_30': user_order_30,
         'user_order_365': user_order_365,
         'all_product': all_product,
-        'product_form': product_form,
     }
     return render(request, "myapp/user_products.html", context)
 
 
-
+def upload_image(request, user_id):
+    if request.method == 'POST':
+        form = ImageForm(request.POST, request.FILES)
+        if form.is_valid():
+            image = form.cleaned_data['image']
+            fs = FileSystemStorage()
+            fs.save(image.name, image)
+    else:
+        form = ImageForm()
+    return render(request, 'myapp/upload_image.html', {'form': form})
 
 # def user_products(request, customer_id, days_history):
 #     customer = get_object_or_404(User, pk=customer_id)

@@ -2378,3 +2378,89 @@ INFO 2024-06-18 18:02:53,914 basehttp 6000 9544 "GET /admin/myapp/order/ HTTP/1.
 INFO 2024-06-18 18:02:53,936 basehttp 6000 9544 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
 INFO 2024-06-18 18:02:54,621 basehttp 6000 9544 "GET /admin/myapp/product/ HTTP/1.1" 200 64953
 INFO 2024-06-18 18:02:54,643 basehttp 6000 9544 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-06-19 09:31:32,920 autoreload 14760 19072 Watching for file changes with StatReloader
+INFO 2024-06-19 09:31:34,440 views 14760 17156 посещение страницы about в: 2024-06-19 09:31:34.440130
+INFO 2024-06-19 09:31:34,446 basehttp 14760 17156 "GET / HTTP/1.1" 200 742
+WARNING 2024-06-19 09:31:34,572 log 14760 17156 Not Found: /favicon.ico
+WARNING 2024-06-19 09:31:34,573 basehttp 14760 17156 "GET /favicon.ico HTTP/1.1" 404 2644
+WARNING 2024-06-19 09:31:50,954 log 14760 17156 Not Found: /upload/
+WARNING 2024-06-19 09:31:50,955 basehttp 14760 17156 "GET /upload/ HTTP/1.1" 404 2632
+INFO 2024-06-19 09:33:55,040 autoreload 14760 19072 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-19 09:33:55,545 autoreload 8356 6128 Watching for file changes with StatReloader
+INFO 2024-06-19 09:34:00,012 basehttp 8356 13228 "GET /user_products/2/ HTTP/1.1" 200 628
+INFO 2024-06-19 09:34:04,358 basehttp 8356 13228 "POST /user_products/2/ HTTP/1.1" 302 0
+WARNING 2024-06-19 09:34:04,369 log 8356 13228 Not Found: /user_products/2/myapp/upload_image.html
+WARNING 2024-06-19 09:34:04,369 basehttp 8356 13228 "GET /user_products/2/myapp/upload_image.html HTTP/1.1" 404 2728
+INFO 2024-06-19 09:34:56,553 autoreload 8356 6128 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\urls.py changed, reloading.
+INFO 2024-06-19 09:34:57,039 autoreload 1256 12588 Watching for file changes with StatReloader
+INFO 2024-06-19 09:34:57,972 basehttp 1256 10848 "GET /user_products/2/ HTTP/1.1" 200 628
+INFO 2024-06-19 09:35:00,568 basehttp 1256 10848 "POST /user_products/2/ HTTP/1.1" 302 0
+WARNING 2024-06-19 09:35:00,578 log 1256 10848 Not Found: /user_products/2/myapp/upload_image.html
+WARNING 2024-06-19 09:35:00,578 basehttp 1256 10848 "GET /user_products/2/myapp/upload_image.html HTTP/1.1" 404 2943
+INFO 2024-06-19 09:35:03,794 basehttp 1256 10848 "GET /user_products/2/ HTTP/1.1" 200 628
+INFO 2024-06-19 09:35:15,806 autoreload 1256 12588 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-19 09:35:16,341 autoreload 2388 9588 Watching for file changes with StatReloader
+INFO 2024-06-19 09:35:17,414 basehttp 2388 2340 "GET /user_products/2/ HTTP/1.1" 200 628
+INFO 2024-06-19 09:35:18,635 basehttp 2388 2340 "POST /user_products/2/ HTTP/1.1" 302 0
+ERROR 2024-06-19 09:35:18,663 log 2388 2340 Internal Server Error: /user_products/2/upload_image/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TypeError: upload_image() got an unexpected keyword argument 'user_id'
+ERROR 2024-06-19 09:35:18,664 basehttp 2388 2340 "GET /user_products/2/upload_image/ HTTP/1.1" 500 63309
+INFO 2024-06-19 09:36:18,425 autoreload 2388 9588 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-19 09:36:18,921 autoreload 5364 5108 Watching for file changes with StatReloader
+INFO 2024-06-19 09:36:22,633 basehttp 5364 11564 "GET /user_products/10 HTTP/1.1" 301 0
+INFO 2024-06-19 09:36:22,656 basehttp 5364 11876 "GET /user_products/10/ HTTP/1.1" 200 628
+ERROR 2024-06-19 09:36:24,530 log 5364 11876 Internal Server Error: /user_products/10/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py", line 40, in user_products
+    return redirect('upload_image')
+           ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\shortcuts.py", line 49, in redirect
+    return redirect_class(resolve_url(to, *args, **kwargs))
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\shortcuts.py", line 180, in resolve_url
+    return reverse(to, args=args, kwargs=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\urls\base.py", line 88, in reverse
+    return resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\urls\resolvers.py", line 851, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'upload_image' with no arguments not found. 1 pattern(s) tried: ['user_products/(?P<user_id>[0-9]+)/upload_image/\\Z']
+ERROR 2024-06-19 09:36:24,532 basehttp 5364 11876 "POST /user_products/10/ HTTP/1.1" 500 90611
+INFO 2024-06-19 09:37:09,796 autoreload 5364 5108 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-19 09:37:10,260 autoreload 16300 11400 Watching for file changes with StatReloader
+INFO 2024-06-19 09:38:07,717 basehttp 16300 13004 "POST /user_products/10/ HTTP/1.1" 302 0
+INFO 2024-06-19 09:38:07,731 basehttp 16300 13004 "GET /user_products/10/upload_image/ HTTP/1.1" 200 555
+WARNING 2024-06-19 09:38:11,919 log 16300 13004 Not Found: /user_products/
+WARNING 2024-06-19 09:38:11,920 basehttp 16300 13004 "GET /user_products/ HTTP/1.1" 404 2868
+INFO 2024-06-19 09:38:14,931 basehttp 16300 13004 "GET /user_products/10/ HTTP/1.1" 200 628
+INFO 2024-06-19 09:38:17,148 basehttp 16300 13004 "POST /user_products/10/ HTTP/1.1" 302 0
+INFO 2024-06-19 09:38:17,154 basehttp 16300 13004 "GET /user_products/10/upload_image/ HTTP/1.1" 200 555
+ERROR 2024-06-19 09:38:24,422 log 16300 13004 Internal Server Error: /user_products/10/upload_image/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py", line 56, in upload_image
+    image = form.cleaned_data['image']
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^
+KeyError: 'image'
+ERROR 2024-06-19 09:38:24,424 basehttp 16300 13004 "POST /user_products/10/upload_image/ HTTP/1.1" 500 68024
+INFO 2024-06-19 09:39:33,690 autoreload 16300 11400 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\forms.py changed, reloading.
+INFO 2024-06-19 09:39:34,171 autoreload 15280 14280 Watching for file changes with StatReloader
