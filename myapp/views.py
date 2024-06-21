@@ -1,13 +1,15 @@
 import logging
 from datetime import datetime, date, timedelta, timezone
 
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.core.files.storage import FileSystemStorage
 from django.db.models import Sum, F
 from django.shortcuts import render, get_object_or_404, redirect
 from django.http import HttpResponse
+from django.views.generic import CreateView, DetailView
 
 from myapp.forms import ProductForm, ImageForm
-from myapp.models import User, Product, Order
+from myapp.models import User, Product, Order, OrderProducts
 
 logger = logging.getLogger(__name__)
 
@@ -49,41 +51,43 @@ def user_products(request, user_id):
     return render(request, "myapp/user_products.html", context)
 
 
-def upload_image(request, user_id):
-    if request.method == 'POST':
-        form = ImageForm(request.POST, request.FILES)
-        if form.is_valid():
-            image = form.cleaned_data['image']
-            fs = FileSystemStorage()
-            fs.save(image.name, image)
-    else:
-        form = ImageForm()
-    return render(request, 'myapp/upload_image.html', {'form': form})
+# def upload_image(request, user_id):
+#     if request.method == 'POST':
+#         form = ImageForm(request.POST, request.FILES)
+#         if form.is_valid():
+#             image = form.cleaned_data['image']
+#             fs = FileSystemStorage()
+#             fs.save(image.name, image)
+#     else:
+#         form = ImageForm()
+#     return render(request, 'myapp/upload_image.html', {'form': form})
 
-# def user_products(request, customer_id, days_history):
-#     customer = get_object_or_404(User, pk=customer_id)
-#     date_start = date.today() - timedelta(days=days_history)
-#     products = OrderProducts.objects.select_related('product').select_related('orders').filter(
-#         order__date__gte=date_start, order__customer_id=customer_id)
-#     products = products.values('product__name', 'product__price').annotate(count_prod=Sum('product_count'))
-#     products = products.annotate(cost=F('product__price') * F('count_prod'))
-#
-#     context = {
-#         'client_name': customer.name,
-#         'period': period(days_history),
-#         'products': products
-#     }
-#
-#     return render(request, 'myapp/user_products.html', context)
-#
-#
-# def period(days: int) -> str:
-#     """Период отчетности."""
-#     match days:
-#         case 7:
-#             return 'за последнюю неделю'
-#         case 30:
-#             return 'за последний месяц'
-#         case 365:
-#             return 'за последний год'
-#     return 'за произвольный период'
+def add_product(request, user_id):
+    if request.method == 'POST':
+        form = ProductForm(request.POST, request.FILES)
+        if form.is_valid():
+            Product.objects.create(**form.cleaned_data)
+            # photo = form.cleaned_data['photo']
+            # fs = FileSystemStorage()
+            # fs.save(photo.name, photo)
+            return redirect('show_product', user_id=user_id)
+    else:
+        form = ProductForm()
+
+    data = {
+        'title': 'Добавление товара',
+        'form': form,
+    }
+    return render(request, 'myapp/upload_image.html', data)
+
+
+def show_product(request, user_id):
+    orders = Order.objects.filter(customer_id=user_id)
+    prod = Product.objects.all()
+    context = {
+        'orders': orders,
+        'prod': prod,
+    }
+    return render(request, 'myapp/show_products.html', context)
+
+

@@ -17,10 +17,10 @@ class User(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=30, verbose_name='Название товара')
     descriptions = models.TextField(null=True, verbose_name='Описание товара')
-    price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name=' Цена товара')
+    price = models.DecimalField(max_digits=8, decimal_places=2, validators=[MinValueValidator(0)], verbose_name='Цена товара')
     count = models.PositiveIntegerField(default=0, verbose_name='Количество товара')
     date = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавленяе товара')
-    photo = models.ImageField(upload_to='products_photo/', null=True, blank=True)
+    photo = models.ImageField(upload_to='products_photo/', null=True, blank=True, verbose_name='Фотография')
 
     def __str__(self):
         return f'Name is {self.name}'
@@ -33,3 +33,11 @@ class Order(models.Model):
                                    verbose_name='Цены товара')
     date = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавленяе товара')
 
+
+class OrderProducts(models.Model):
+    order = models.ForeignKey(Order, on_delete=models.CASCADE)
+    product = models.ForeignKey(Product, on_delete=models.PROTECT)
+    product_count = models.IntegerField(default=1, validators=[MinValueValidator(1)])
+
+    def __str__(self):
+        return f'{self.order.primary_key}. {self.product.name} - {self.product_count}'
