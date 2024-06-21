@@ -2,14 +2,14 @@
 
 {% block content %}
 
+<h1>Список заказов</h1>
+<ul>
 {% for order in orders %}
-    {{ order.products.name|linebreaks }}
-    {{ order.products.descriptions|linebreaks }}
-    {{ order.products.price|linebreaks }}
-    {{ order.products.count|linebreaks }}
-    {{ order.products.date|linebreaks }}
+    <h1>{{ order.customer }} заказал: </h1>
+    {{ order.products }} по цене:
+    {{ order.all_price }}
 {% endfor %}
-
+</ul>
 <!--    <h1>Имя товара: {{pr.products.name}}</h1>-->
 <!--    <h1>Описание: {{pr.products.descriptions}}</h1>-->
 <!--    <h1>Цена: {{pr.price}}</h1>-->

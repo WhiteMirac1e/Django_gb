@@ -82,12 +82,17 @@ def add_product(request, user_id):
 
 
 def show_product(request, user_id):
-    orders = Order.objects.filter(customer_id=user_id)
-    prod = Product.objects.all()
+    orders = Order.objects.filter(customer__id=user_id)
+    # user = User.objects.get(pk=user_id)
+    # orders = user.orders.all()
+    # orders = Product.objects.filter(order__customer=user)
+    # orders = Order.objects.filter(customer_id=user_id)
+    # prod = Product.objects.all()
     context = {
         'orders': orders,
-        'prod': prod,
+        # 'prod': prod,
     }
     return render(request, 'myapp/show_products.html', context)
+
 
 
