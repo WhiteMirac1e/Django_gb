@@ -5595,3 +5595,118 @@ INFO 2024-06-21 15:58:42,730 autoreload 20340 15972 Watching for file changes wi
 INFO 2024-06-21 15:58:45,326 basehttp 20340 9868 "GET /show_product/74/ HTTP/1.1" 200 2565
 INFO 2024-06-21 15:59:48,576 autoreload 8324 10000 Watching for file changes with StatReloader
 INFO 2024-06-21 15:59:50,072 basehttp 8324 17692 "GET /show_product/74/ HTTP/1.1" 200 2345
+INFO 2024-06-21 16:04:01,543 autoreload 15544 13108 Watching for file changes with StatReloader
+INFO 2024-06-21 16:04:03,286 basehttp 15544 11868 "GET /show_product/74/ HTTP/1.1" 200 2965
+INFO 2024-06-21 16:04:16,581 autoreload 17568 11564 Watching for file changes with StatReloader
+ERROR 2024-06-21 16:04:17,907 log 17568 14260 Internal Server Error: /show_product/74/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py", line 95, in show_product
+    return render(request, 'myapp/show_products.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\defaulttags.py", line 861, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 698, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse the remainder: '[0]' from 'order.customer[0]'
+ERROR 2024-06-21 16:04:17,916 basehttp 17568 14260 "GET /show_product/74/ HTTP/1.1" 500 206535
+INFO 2024-06-21 16:04:38,453 autoreload 4556 8856 Watching for file changes with StatReloader
+INFO 2024-06-21 16:04:39,904 basehttp 4556 14696 "GET /show_product/74/ HTTP/1.1" 200 1945
+INFO 2024-06-21 16:04:55,211 autoreload 5344 5232 Watching for file changes with StatReloader
+INFO 2024-06-21 16:04:56,991 basehttp 5344 6372 "GET /show_product/74/ HTTP/1.1" 200 1805
+INFO 2024-06-21 16:05:16,864 autoreload 13904 19060 Watching for file changes with StatReloader
+INFO 2024-06-21 16:05:50,702 autoreload 7132 8900 Watching for file changes with StatReloader
+INFO 2024-06-21 16:05:52,312 basehttp 7132 11656 "GET /show_product/74/ HTTP/1.1" 200 1379
+INFO 2024-06-21 16:06:06,361 autoreload 12256 11404 Watching for file changes with StatReloader
+INFO 2024-06-21 16:06:08,128 basehttp 12256 9776 "GET /show_product/74/ HTTP/1.1" 200 1379
+INFO 2024-06-21 16:06:08,828 basehttp 12256 9776 "GET /show_product/74/ HTTP/1.1" 200 1379
+INFO 2024-06-21 16:06:09,139 basehttp 12256 9776 "GET /show_product/74/ HTTP/1.1" 200 1379
+INFO 2024-06-21 16:06:09,317 basehttp 12256 9776 "GET /show_product/74/ HTTP/1.1" 200 1379
+INFO 2024-06-21 16:06:09,485 basehttp 12256 9776 "GET /show_product/74/ HTTP/1.1" 200 1379
+INFO 2024-06-21 16:06:09,650 basehttp 12256 9776 "GET /show_product/74/ HTTP/1.1" 200 1379
+INFO 2024-06-21 16:06:10,091 basehttp 12256 9776 "GET /show_product/74/ HTTP/1.1" 200 1379
+INFO 2024-06-21 16:06:33,547 autoreload 2036 13068 Watching for file changes with StatReloader
+INFO 2024-06-21 16:07:21,605 autoreload 14468 20700 Watching for file changes with StatReloader
+INFO 2024-06-21 16:07:22,839 basehttp 14468 9240 "GET /show_product/74/ HTTP/1.1" 200 1815
+INFO 2024-06-21 16:07:24,292 basehttp 14468 9240 "GET /show_product/74/ HTTP/1.1" 200 1815
+INFO 2024-06-21 16:10:09,627 autoreload 21476 11088 Watching for file changes with StatReloader
+INFO 2024-06-21 16:12:56,940 basehttp 21476 15544 "GET /show_product/74/ HTTP/1.1" 200 1815
+INFO 2024-06-21 16:17:40,696 autoreload 3572 14340 Watching for file changes with StatReloader
+INFO 2024-06-21 16:17:42,269 basehttp 3572 15800 "GET /show_product/74/ HTTP/1.1" 200 1243
+INFO 2024-06-21 16:20:35,272 autoreload 10024 3236 Watching for file changes with StatReloader
+INFO 2024-06-21 16:20:36,750 basehttp 10024 10012 "GET /show_product/74/ HTTP/1.1" 200 1252
+INFO 2024-06-21 16:20:57,811 basehttp 10024 10012 "GET /add_product/1/ HTTP/1.1" 200 1468
+INFO 2024-06-21 16:21:18,581 basehttp 10024 10012 "POST /add_product/1/ HTTP/1.1" 302 0
+INFO 2024-06-21 16:21:18,589 basehttp 10024 10012 "GET /show_product/1/ HTTP/1.1" 200 459
+INFO 2024-06-21 16:21:49,935 basehttp 10024 10012 "GET /show_product/1/ HTTP/1.1" 200 463
+INFO 2024-06-21 16:30:13,339 basehttp 10024 12700 "GET /show_product/1/ HTTP/1.1" 200 540
+INFO 2024-06-21 16:32:46,470 autoreload 10024 3236 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\migrations\0004_alter_product_photo_alter_product_price_and_more.py changed, reloading.
+INFO 2024-06-21 16:32:47,035 autoreload 20388 8932 Watching for file changes with StatReloader
+INFO 2024-06-21 16:34:23,951 autoreload 20388 8932 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\migrations\0001_initial.py changed, reloading.
+INFO 2024-06-21 16:34:24,433 autoreload 9996 10044 Watching for file changes with StatReloader
+INFO 2024-06-24 10:01:18,498 autoreload 11404 10764 Watching for file changes with StatReloader

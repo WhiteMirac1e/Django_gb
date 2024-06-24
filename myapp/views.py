@@ -9,7 +9,7 @@ from django.http import HttpResponse
 from django.views.generic import CreateView, DetailView
 
 from myapp.forms import ProductForm, ImageForm
-from myapp.models import User, Product, Order, OrderProducts
+from myapp.models import User, Product, Order
 
 logger = logging.getLogger(__name__)
 
@@ -83,14 +83,14 @@ def add_product(request, user_id):
 
 def show_product(request, user_id):
     orders = Order.objects.filter(customer__id=user_id)
-    # user = User.objects.get(pk=user_id)
+    user = User.objects.get(pk=user_id)
     # orders = user.orders.all()
     # orders = Product.objects.filter(order__customer=user)
     # orders = Order.objects.filter(customer_id=user_id)
     # prod = Product.objects.all()
     context = {
         'orders': orders,
-        # 'prod': prod,
+        'user': user,
     }
     return render(request, 'myapp/show_products.html', context)
 

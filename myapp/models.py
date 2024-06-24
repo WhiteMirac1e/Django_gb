@@ -33,11 +33,3 @@ class Order(models.Model):
                                    verbose_name='Цены товара')
     date = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавленяе товара')
 
-
-class OrderProducts(models.Model):
-    order = models.ForeignKey(Order, on_delete=models.CASCADE)
-    product = models.ForeignKey(Product, on_delete=models.PROTECT)
-    product_count = models.IntegerField(default=1, validators=[MinValueValidator(1)])
-
-    def __str__(self):
-        return f'{self.order.primary_key}. {self.product.name} - {self.product_count}'
