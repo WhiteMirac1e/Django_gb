@@ -5710,3 +5710,363 @@ INFO 2024-06-21 16:32:47,035 autoreload 20388 8932 Watching for file changes wit
 INFO 2024-06-21 16:34:23,951 autoreload 20388 8932 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\migrations\0001_initial.py changed, reloading.
 INFO 2024-06-21 16:34:24,433 autoreload 9996 10044 Watching for file changes with StatReloader
 INFO 2024-06-24 10:01:18,498 autoreload 11404 10764 Watching for file changes with StatReloader
+INFO 2024-06-24 10:05:14,331 autoreload 15824 4512 Watching for file changes with StatReloader
+INFO 2024-06-24 10:05:17,661 basehttp 15824 9524 "GET /add_product/1/ HTTP/1.1" 200 1468
+WARNING 2024-06-24 10:05:17,892 log 15824 9524 Not Found: /favicon.ico
+WARNING 2024-06-24 10:05:17,892 basehttp 15824 9524 "GET /favicon.ico HTTP/1.1" 404 2967
+INFO 2024-06-24 10:05:30,720 basehttp 15824 9524 "POST /add_product/1/ HTTP/1.1" 302 0
+ERROR 2024-06-24 10:05:30,802 log 15824 9524 Internal Server Error: /show_product/1/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py", line 86, in show_product
+    user = User.objects.get(pk=user_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\db\models\manager.py", line 87, in manager_method
+    return getattr(self.get_queryset(), name)(*args, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\db\models\query.py", line 649, in get
+    raise self.model.DoesNotExist(
+myapp.models.User.DoesNotExist: User matching query does not exist.
+ERROR 2024-06-24 10:05:30,804 basehttp 15824 9524 "GET /show_product/1/ HTTP/1.1" 500 76880
+INFO 2024-06-24 10:06:19,011 basehttp 15824 9524 "GET /add_product/1/ HTTP/1.1" 200 1468
+INFO 2024-06-24 10:06:36,499 basehttp 15824 9524 "POST /add_product/1/ HTTP/1.1" 302 0
+INFO 2024-06-24 10:06:36,514 basehttp 15824 9524 "GET /show_product/1/ HTTP/1.1" 200 459
+INFO 2024-06-24 10:13:31,983 autoreload 15824 4512 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-24 10:13:32,505 autoreload 21256 7816 Watching for file changes with StatReloader
+INFO 2024-06-24 10:14:57,004 autoreload 21256 7816 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py changed, reloading.
+INFO 2024-06-24 10:14:57,520 autoreload 12464 5024 Watching for file changes with StatReloader
+INFO 2024-06-24 10:28:44,470 basehttp 12464 11856 "GET /show_product/1/ HTTP/1.1" 200 536
+INFO 2024-06-24 10:28:46,366 basehttp 12464 11856 "GET /show_product/1/ HTTP/1.1" 200 536
+INFO 2024-06-24 10:29:08,135 basehttp 12464 11856 "GET /show_product/1/ HTTP/1.1" 200 536
+INFO 2024-06-24 10:29:08,893 basehttp 12464 11856 "GET /show_product/1/ HTTP/1.1" 200 536
+INFO 2024-06-24 10:29:09,364 basehttp 12464 11856 "GET /show_product/1/ HTTP/1.1" 200 536
+INFO 2024-06-24 10:29:09,533 basehttp 12464 11856 "GET /show_product/1/ HTTP/1.1" 200 536
+INFO 2024-06-24 10:29:09,729 basehttp 12464 11856 "GET /show_product/1/ HTTP/1.1" 200 536
+INFO 2024-06-24 10:29:10,158 basehttp 12464 11856 "GET /show_product/1/ HTTP/1.1" 200 536
+INFO 2024-06-24 10:29:10,345 basehttp 12464 11856 "GET /show_product/1/ HTTP/1.1" 200 536
+INFO 2024-06-24 10:37:43,086 autoreload 7576 4884 Watching for file changes with StatReloader
+INFO 2024-06-24 10:37:44,570 views 7576 13104 посещение страницы about в: 2024-06-24 10:37:44.570951
+INFO 2024-06-24 10:37:44,594 basehttp 7576 13104 "GET / HTTP/1.1" 200 742
+INFO 2024-06-24 10:37:57,152 basehttp 7576 13104 "GET /show_product/1/ HTTP/1.1" 200 541
+INFO 2024-06-24 10:38:02,165 basehttp 7576 13104 "GET /show_product/2/ HTTP/1.1" 200 537
+INFO 2024-06-24 10:38:22,510 basehttp 7576 13104 "GET /show_product/1/ HTTP/1.1" 200 541
+INFO 2024-06-24 10:39:02,221 autoreload 15500 10804 Watching for file changes with StatReloader
+INFO 2024-06-24 10:39:03,699 basehttp 15500 20884 "GET /show_product/1/ HTTP/1.1" 200 557
+INFO 2024-06-24 10:39:04,814 basehttp 15500 20884 "GET /show_product/1/ HTTP/1.1" 200 557
+INFO 2024-06-24 10:39:05,267 basehttp 15500 20884 "GET /show_product/1/ HTTP/1.1" 200 557
+INFO 2024-06-24 10:39:05,665 basehttp 15500 20884 "GET /show_product/1/ HTTP/1.1" 200 557
+INFO 2024-06-24 10:39:05,937 basehttp 15500 20884 "GET /show_product/1/ HTTP/1.1" 200 557
+INFO 2024-06-24 10:39:08,825 basehttp 15500 20884 "GET /show_product/2/ HTTP/1.1" 200 553
+INFO 2024-06-24 10:41:04,987 autoreload 3376 12696 Watching for file changes with StatReloader
+INFO 2024-06-24 10:41:09,472 autoreload 8376 12904 Watching for file changes with StatReloader
+INFO 2024-06-24 10:41:11,799 basehttp 8376 7096 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:12,533 basehttp 8376 7096 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:12,778 basehttp 8376 7096 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:12,950 basehttp 8376 7096 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:19,936 autoreload 12388 21064 Watching for file changes with StatReloader
+INFO 2024-06-24 10:41:22,569 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:23,173 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:23,669 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:23,836 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:24,277 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:24,677 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:24,852 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:25,028 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:25,217 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:25,384 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:25,983 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:26,516 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:26,700 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:27,117 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:27,292 basehttp 12388 6200 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:41:35,176 autoreload 15012 20180 Watching for file changes with StatReloader
+INFO 2024-06-24 10:41:36,928 basehttp 15012 11720 "GET /show_product/2/ HTTP/1.1" 200 537
+INFO 2024-06-24 10:41:37,453 basehttp 15012 11720 "GET /show_product/2/ HTTP/1.1" 200 537
+INFO 2024-06-24 10:43:07,985 autoreload 19644 16180 Watching for file changes with StatReloader
+INFO 2024-06-24 10:43:10,242 basehttp 19644 11392 "GET /show_product/2/ HTTP/1.1" 200 551
+INFO 2024-06-24 10:44:06,332 autoreload 16936 16748 Watching for file changes with StatReloader
+INFO 2024-06-24 10:44:09,630 basehttp 16936 20020 "GET /show_product/2/ HTTP/1.1" 200 551
+INFO 2024-06-24 10:44:10,318 basehttp 16936 20020 "GET /show_product/2/ HTTP/1.1" 200 551
+INFO 2024-06-24 10:44:34,432 autoreload 14188 15216 Watching for file changes with StatReloader
+INFO 2024-06-24 10:44:36,260 basehttp 14188 17712 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:44:37,218 basehttp 14188 17712 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:44:37,608 basehttp 14188 17712 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:44:37,895 basehttp 14188 17712 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:44:49,246 autoreload 18364 9088 Watching for file changes with StatReloader
+INFO 2024-06-24 10:44:52,177 basehttp 18364 16564 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:44:52,666 basehttp 18364 16564 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:44:52,914 basehttp 18364 16564 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:44:53,089 basehttp 18364 16564 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:44:53,421 basehttp 18364 16564 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:44:53,638 basehttp 18364 16564 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:45:03,249 autoreload 6052 3816 Watching for file changes with StatReloader
+INFO 2024-06-24 10:45:06,353 basehttp 6052 11124 "GET /show_product/2/ HTTP/1.1" 200 551
+INFO 2024-06-24 10:45:23,221 autoreload 21052 5064 Watching for file changes with StatReloader
+INFO 2024-06-24 10:45:25,213 basehttp 21052 15876 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:45:25,818 basehttp 21052 15876 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:45:26,127 basehttp 21052 15876 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:45:26,286 basehttp 21052 15876 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:45:26,447 basehttp 21052 15876 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:45:26,623 basehttp 21052 15876 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:45:29,979 basehttp 21052 15876 "GET /show_product/1/ HTTP/1.1" 200 537
+INFO 2024-06-24 10:46:17,815 autoreload 13564 12572 Watching for file changes with StatReloader
+INFO 2024-06-24 10:50:25,121 autoreload 18752 9704 Watching for file changes with StatReloader
+INFO 2024-06-24 10:50:29,422 autoreload 11912 19892 Watching for file changes with StatReloader
+INFO 2024-06-24 10:50:40,225 basehttp 11912 21016 "GET /add_product/1/ HTTP/1.1" 200 1468
+INFO 2024-06-24 10:58:12,785 autoreload 13276 19676 Watching for file changes with StatReloader
+INFO 2024-06-24 10:58:13,143 basehttp 13276 19908 "POST /add_product/1/ HTTP/1.1" 302 0
+INFO 2024-06-24 10:58:13,163 basehttp 13276 19908 "GET /show_product/1/ HTTP/1.1" 200 538
+INFO 2024-06-24 10:58:15,901 basehttp 13276 19908 "GET /show_product/1/ HTTP/1.1" 200 538
+INFO 2024-06-24 10:58:16,729 basehttp 13276 19908 "GET /show_product/1/ HTTP/1.1" 200 538
+INFO 2024-06-24 10:58:18,925 basehttp 13276 19908 "GET /show_product/1/ HTTP/1.1" 200 538
+INFO 2024-06-24 10:58:19,809 basehttp 13276 19908 "GET /show_product/1/ HTTP/1.1" 200 538
+INFO 2024-06-24 10:58:20,112 basehttp 13276 19908 "GET /show_product/1/ HTTP/1.1" 200 538
+INFO 2024-06-24 10:58:23,413 basehttp 13276 19908 "GET /show_product/2/ HTTP/1.1" 200 534
+INFO 2024-06-24 10:59:24,886 autoreload 15432 10296 Watching for file changes with StatReloader
+INFO 2024-06-24 10:59:26,805 basehttp 15432 12276 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:59:27,529 basehttp 15432 12276 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:59:27,714 basehttp 15432 12276 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:59:27,888 basehttp 15432 12276 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:59:36,718 autoreload 7672 8848 Watching for file changes with StatReloader
+INFO 2024-06-24 10:59:48,837 autoreload 6652 17708 Watching for file changes with StatReloader
+INFO 2024-06-24 10:59:50,630 basehttp 6652 4780 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:59:51,112 basehttp 6652 4780 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:59:51,271 basehttp 6652 4780 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 10:59:57,932 autoreload 15676 21264 Watching for file changes with StatReloader
+INFO 2024-06-24 11:00:00,245 basehttp 15676 6752 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 11:00:00,968 basehttp 15676 6752 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 11:00:01,340 basehttp 15676 6752 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 11:00:01,521 basehttp 15676 6752 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 11:00:01,982 basehttp 15676 6752 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 11:00:02,761 basehttp 15676 6752 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 11:00:06,034 basehttp 15676 6752 "GET /show_product/1/ HTTP/1.1" 200 537
+INFO 2024-06-24 11:00:17,010 autoreload 20724 17316 Watching for file changes with StatReloader
+WARNING 2024-06-24 11:29:07,265 log 20724 13340 Not Found: /admin'
+WARNING 2024-06-24 11:29:07,265 basehttp 20724 13340 "GET /admin' HTTP/1.1" 404 2967
+INFO 2024-06-24 11:29:09,676 basehttp 20724 13340 "GET /admin HTTP/1.1" 301 0
+INFO 2024-06-24 11:29:09,688 basehttp 20724 10656 "GET /admin/ HTTP/1.1" 302 0
+INFO 2024-06-24 11:29:09,776 basehttp 20724 10656 "GET /admin/login/?next=/admin/ HTTP/1.1" 200 4359
+INFO 2024-06-24 11:29:09,806 basehttp 20724 10656 "GET /static/admin/css/base.css HTTP/1.1" 304 0
+INFO 2024-06-24 11:29:09,808 basehttp 20724 15208 "GET /static/admin/css/dark_mode.css HTTP/1.1" 304 0
+INFO 2024-06-24 11:29:09,811 basehttp 20724 9156 "GET /static/admin/css/nav_sidebar.css HTTP/1.1" 304 0
+INFO 2024-06-24 11:29:09,811 basehttp 20724 7872 "GET /static/admin/css/responsive.css HTTP/1.1" 304 0
+INFO 2024-06-24 11:29:09,812 basehttp 20724 18692 "GET /static/admin/js/theme.js HTTP/1.1" 304 0
+INFO 2024-06-24 11:29:09,812 basehttp 20724 15208 "GET /static/admin/js/nav_sidebar.js HTTP/1.1" 304 0
+INFO 2024-06-24 11:29:09,846 basehttp 20724 10380 "GET /static/admin/css/login.css HTTP/1.1" 200 958
+INFO 2024-06-24 11:29:13,645 basehttp 20724 10380 "POST /admin/login/?next=/admin/ HTTP/1.1" 200 4625
+INFO 2024-06-24 11:29:55,279 autoreload 2680 6224 Watching for file changes with StatReloader
+INFO 2024-06-24 11:29:58,266 basehttp 2680 13624 "POST /admin/login/?next=/admin/ HTTP/1.1" 302 0
+INFO 2024-06-24 11:29:58,315 basehttp 2680 13624 "GET /admin/ HTTP/1.1" 200 7488
+INFO 2024-06-24 11:29:58,372 basehttp 2680 13624 "GET /static/admin/css/dashboard.css HTTP/1.1" 200 441
+INFO 2024-06-24 11:29:58,384 basehttp 2680 10392 "GET /static/admin/img/icon-changelink.svg HTTP/1.1" 200 380
+INFO 2024-06-24 11:29:58,384 basehttp 2680 13624 "GET /static/admin/img/icon-addlink.svg HTTP/1.1" 200 331
+INFO 2024-06-24 11:30:02,605 basehttp 2680 13624 "GET /admin/myapp/order/ HTTP/1.1" 200 12227
+INFO 2024-06-24 11:30:02,643 basehttp 2680 13624 "GET /static/admin/css/changelists.css HTTP/1.1" 200 6811
+INFO 2024-06-24 11:30:02,650 basehttp 2680 9576 "GET /static/admin/js/jquery.init.js HTTP/1.1" 200 347
+INFO 2024-06-24 11:30:02,654 basehttp 2680 11184 "GET /static/admin/js/core.js HTTP/1.1" 200 6208
+INFO 2024-06-24 11:30:02,654 basehttp 2680 18208 "GET /static/admin/js/admin/RelatedObjectLookups.js HTTP/1.1" 200 9042
+INFO 2024-06-24 11:30:02,659 basehttp 2680 10392 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-06-24 11:30:02,660 basehttp 2680 13624 "GET /static/admin/js/actions.js HTTP/1.1" 200 8067
+INFO 2024-06-24 11:30:02,665 basehttp 2680 9576 "GET /static/admin/js/urlify.js HTTP/1.1" 200 7887
+INFO 2024-06-24 11:30:02,666 basehttp 2680 18208 "GET /static/admin/js/prepopulate.js HTTP/1.1" 200 1531
+INFO 2024-06-24 11:30:02,685 basehttp 2680 9696 "GET /static/admin/js/vendor/jquery/jquery.js HTTP/1.1" 200 285314
+INFO 2024-06-24 11:30:02,702 basehttp 2680 9696 "GET /static/admin/js/filters.js HTTP/1.1" 200 978
+INFO 2024-06-24 11:30:02,719 basehttp 2680 11184 "GET /static/admin/js/vendor/xregexp/xregexp.js HTTP/1.1" 200 325171
+INFO 2024-06-24 11:30:02,739 basehttp 2680 9696 "GET /static/admin/img/icon-viewlink.svg HTTP/1.1" 200 581
+INFO 2024-06-24 11:30:02,740 basehttp 2680 11184 "GET /static/admin/img/tooltag-add.svg HTTP/1.1" 200 331
+INFO 2024-06-24 11:30:17,523 basehttp 2680 11184 "GET /admin/myapp/product/ HTTP/1.1" 200 14536
+INFO 2024-06-24 11:30:17,550 basehttp 2680 11184 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-06-24 11:30:17,553 basehttp 2680 9696 "GET /static/admin/img/search.svg HTTP/1.1" 200 458
+INFO 2024-06-24 11:30:19,100 basehttp 2680 9696 "GET /admin/myapp/user/ HTTP/1.1" 200 12707
+INFO 2024-06-24 11:30:19,121 basehttp 2680 9696 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-06-24 11:30:22,038 basehttp 2680 9696 "GET /admin/myapp/order/ HTTP/1.1" 200 12227
+INFO 2024-06-24 11:30:22,061 basehttp 2680 9696 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-06-24 11:30:30,119 basehttp 2680 9696 "GET /admin/myapp/order/2/change/ HTTP/1.1" 200 13192
+INFO 2024-06-24 11:30:30,151 basehttp 2680 11184 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-06-24 11:30:30,154 basehttp 2680 9696 "GET /static/admin/css/forms.css HTTP/1.1" 200 9090
+INFO 2024-06-24 11:30:30,158 basehttp 2680 18208 "GET /static/admin/js/prepopulate_init.js HTTP/1.1" 200 586
+INFO 2024-06-24 11:30:30,163 basehttp 2680 11184 "GET /static/admin/css/widgets.css HTTP/1.1" 200 11800
+INFO 2024-06-24 11:30:30,165 basehttp 2680 9696 "GET /static/admin/js/change_form.js HTTP/1.1" 200 606
+INFO 2024-06-24 11:30:47,188 basehttp 2680 9696 "GET /admin/myapp/product/add/?_to_field=id&_popup=1 HTTP/1.1" 200 7050
+INFO 2024-06-24 11:30:47,208 basehttp 2680 9696 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-06-24 11:31:14,962 basehttp 2680 9696 "GET /admin/myapp/order/ HTTP/1.1" 200 12227
+INFO 2024-06-24 11:31:14,988 basehttp 2680 9696 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-06-24 11:31:21,332 basehttp 2680 9696 "GET /admin/myapp/order/2/change/ HTTP/1.1" 200 13192
+INFO 2024-06-24 11:31:21,354 basehttp 2680 9696 "GET /admin/jsi18n/ HTTP/1.1" 200 17546
+INFO 2024-06-24 11:31:46,108 autoreload 17904 18248 Watching for file changes with StatReloader
+INFO 2024-06-24 11:31:53,001 basehttp 17904 15896 "GET /add_product/1/ HTTP/1.1" 200 1468
+INFO 2024-06-24 11:32:00,148 basehttp 17904 15896 "GET /show_product/2/ HTTP/1.1" 200 533
+INFO 2024-06-24 11:32:07,715 autoreload 1776 14152 Watching for file changes with StatReloader
+INFO 2024-06-24 11:32:09,330 basehttp 1776 13108 "GET /show_product/2/ HTTP/1.1" 200 537
+INFO 2024-06-24 12:02:05,719 autoreload 10316 11832 Watching for file changes with StatReloader
+INFO 2024-06-24 12:02:47,064 autoreload 10316 11832 C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myproject\settings.py changed, reloading.
+INFO 2024-06-24 12:02:47,572 autoreload 18112 6844 Watching for file changes with StatReloader
+INFO 2024-06-24 12:03:17,736 autoreload 16036 4164 Watching for file changes with StatReloader
+ERROR 2024-06-24 12:03:21,519 log 16036 10320 Internal Server Error: /show_product/2/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in __init__
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 92, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\conf\__init__.py", line 98, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2024-06-24 12:03:21,562 basehttp 16036 10320 "GET /show_product/2/ HTTP/1.1" 500 145
+ERROR 2024-06-24 12:03:22,803 log 16036 10320 Internal Server Error: /show_product/2/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\utils\deprecation.py", line 133, in __call__
+    response = self.process_request(request)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\contrib\messages\middleware.py", line 12, in process_request
+    request._messages = default_storage(request)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\contrib\messages\storage\__init__.py", line 12, in default_storage
+    return import_string(settings.MESSAGE_STORAGE)(request)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\contrib\messages\storage\fallback.py", line 17, in __init__
+    storage_class(*args, **kwargs) for storage_class in self.storage_classes
+    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\contrib\messages\storage\cookie.py", line 92, in __init__
+    self.signer = signing.get_cookie_signer(salt=self.key_salt)
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\signing.py", line 114, in get_cookie_signer
+    key=_cookie_signer_key(settings.SECRET_KEY),
+                           ^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\conf\__init__.py", line 98, in __getattr__
+    raise ImproperlyConfigured("The SECRET_KEY setting must not be empty.")
+django.core.exceptions.ImproperlyConfigured: The SECRET_KEY setting must not be empty.
+ERROR 2024-06-24 12:03:22,803 basehttp 16036 10320 "GET /show_product/2/ HTTP/1.1" 500 145
+INFO 2024-06-24 12:04:10,185 autoreload 12112 5372 Watching for file changes with StatReloader
+INFO 2024-06-24 12:04:12,692 basehttp 12112 11644 "GET /show_product/2/ HTTP/1.1" 200 563
+INFO 2024-06-24 12:04:41,529 autoreload 3060 17684 Watching for file changes with StatReloader
+INFO 2024-06-24 12:04:44,028 basehttp 3060 3760 "GET /show_product/2/ HTTP/1.1" 200 577
+INFO 2024-06-24 12:05:04,203 basehttp 3060 3760 "GET /add_product/1/ HTTP/1.1" 200 1468
+INFO 2024-06-24 12:05:28,960 basehttp 3060 3760 "POST /add_product/1/ HTTP/1.1" 302 0
+INFO 2024-06-24 12:05:28,970 basehttp 3060 3760 "GET /show_product/1/ HTTP/1.1" 200 573
+INFO 2024-06-24 12:05:34,945 basehttp 3060 3760 "GET /show_product/1/ HTTP/1.1" 200 573
+INFO 2024-06-24 12:06:43,448 basehttp 3060 3760 "GET /show_product/1/ HTTP/1.1" 200 417
+INFO 2024-06-24 12:07:16,991 autoreload 11048 16564 Watching for file changes with StatReloader
+INFO 2024-06-24 12:07:18,145 basehttp 11048 11620 "GET /show_product/1/ HTTP/1.1" 200 415
+INFO 2024-06-24 12:07:33,614 autoreload 9732 14164 Watching for file changes with StatReloader
+INFO 2024-06-24 12:07:34,702 basehttp 9732 3804 "GET /show_product/1/ HTTP/1.1" 200 429
+INFO 2024-06-24 12:07:35,792 basehttp 9732 3804 "GET /show_product/1/ HTTP/1.1" 200 429
+INFO 2024-06-24 12:07:36,408 basehttp 9732 3804 "GET /show_product/1/ HTTP/1.1" 200 429
+INFO 2024-06-24 12:07:44,306 autoreload 19056 4784 Watching for file changes with StatReloader
+WARNING 2024-06-24 12:07:46,352 base 19056 16904 Session data corrupted
+ERROR 2024-06-24 12:07:46,384 log 19056 16904 Internal Server Error: /show_product/1/
+Traceback (most recent call last):
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\exception.py", line 55, in inner
+    response = get_response(request)
+               ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\core\handlers\base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\myproject\myapp\views.py", line 98, in show_product
+    return render(request, 'myapp/show_products.html', context)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loader.py", line 61, in render_to_string
+    template = get_template(template_name, using=using)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loader.py", line 15, in get_template
+    return engine.get_template(template_name)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\backends\django.py", line 33, in get_template
+    return Template(self.engine.get_template(template_name), self)
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\engine.py", line 177, in get_template
+    template, origin = self.find_template(template_name)
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\engine.py", line 159, in find_template
+    template = loader.get_template(name, skip=skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loaders\cached.py", line 57, in get_template
+    template = super().get_template(template_name, skip)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loaders\base.py", line 28, in get_template
+    return Template(
+           ^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 154, in __init__
+    self.nodelist = self.compile_nodelist()
+                    ^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 196, in compile_nodelist
+    return parser.parse()
+           ^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loader_tags.py", line 295, in do_extends
+    nodelist = parser.parse()
+               ^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\loader_tags.py", line 234, in do_block
+    nodelist = parser.parse(("endblock",))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\defaulttags.py", line 861, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 510, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 508, in parse
+    compiled_result = compile_func(self, token)
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\defaulttags.py", line 861, in do_for
+    nodelist_loop = parser.parse(
+                    ^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 481, in parse
+    raise self.error(token, e)
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 479, in parse
+    filter_expression = self.compile_filter(token.contents)
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 597, in compile_filter
+    return FilterExpression(token, self)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\Ivan\PycharmProjects\Django_geek_dz\.venv\Lib\site-packages\django\template\base.py", line 670, in __init__
+    raise TemplateSyntaxError(
+django.template.exceptions.TemplateSyntaxError: Could not parse some characters: product.price| ||| linebreaks
+ERROR 2024-06-24 12:07:46,390 basehttp 19056 16904 "GET /show_product/1/ HTTP/1.1" 500 215713
+INFO 2024-06-24 12:07:52,424 autoreload 17144 9184 Watching for file changes with StatReloader
+INFO 2024-06-24 12:07:54,289 basehttp 17144 3964 "GET /show_product/1/ HTTP/1.1" 200 429
+INFO 2024-06-24 12:08:42,603 autoreload 7520 13184 Watching for file changes with StatReloader
+INFO 2024-06-24 12:08:49,490 autoreload 18376 6512 Watching for file changes with StatReloader
+INFO 2024-06-24 12:08:51,063 basehttp 18376 16300 "GET /show_product/1/ HTTP/1.1" 200 568
+INFO 2024-06-24 12:08:51,123 basehttp 18376 16300 "GET /media/products_photo/lama5_L1HzGsB.jpg HTTP/1.1" 200 699922
+INFO 2024-06-24 12:10:17,267 autoreload 15916 15080 Watching for file changes with StatReloader

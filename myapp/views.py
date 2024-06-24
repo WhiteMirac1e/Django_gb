@@ -1,14 +1,8 @@
 import logging
-from datetime import datetime, date, timedelta, timezone
+from datetime import datetime, timedelta
+from django.shortcuts import render, redirect
 
-from django.contrib.auth.mixins import LoginRequiredMixin
-from django.core.files.storage import FileSystemStorage
-from django.db.models import Sum, F
-from django.shortcuts import render, get_object_or_404, redirect
-from django.http import HttpResponse
-from django.views.generic import CreateView, DetailView
-
-from myapp.forms import ProductForm, ImageForm
+from myapp.forms import ProductForm
 from myapp.models import User, Product, Order
 
 logger = logging.getLogger(__name__)
@@ -51,25 +45,11 @@ def user_products(request, user_id):
     return render(request, "myapp/user_products.html", context)
 
 
-# def upload_image(request, user_id):
-#     if request.method == 'POST':
-#         form = ImageForm(request.POST, request.FILES)
-#         if form.is_valid():
-#             image = form.cleaned_data['image']
-#             fs = FileSystemStorage()
-#             fs.save(image.name, image)
-#     else:
-#         form = ImageForm()
-#     return render(request, 'myapp/upload_image.html', {'form': form})
-
 def add_product(request, user_id):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             Product.objects.create(**form.cleaned_data)
-            # photo = form.cleaned_data['photo']
-            # fs = FileSystemStorage()
-            # fs.save(photo.name, photo)
             return redirect('show_product', user_id=user_id)
     else:
         form = ProductForm()
@@ -84,15 +64,10 @@ def add_product(request, user_id):
 def show_product(request, user_id):
     orders = Order.objects.filter(customer__id=user_id)
     user = User.objects.get(pk=user_id)
-    # orders = user.orders.all()
-    # orders = Product.objects.filter(order__customer=user)
-    # orders = Order.objects.filter(customer_id=user_id)
-    # prod = Product.objects.all()
+    all_products = Product.objects.all()
     context = {
         'orders': orders,
         'user': user,
+        'all_products': all_products,
     }
     return render(request, 'myapp/show_products.html', context)
-
-
-

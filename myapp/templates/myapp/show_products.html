@@ -7,19 +7,17 @@
     <h1>{{ user.name }} </h1>
         <p> заказал: </p>
     {% for order in orders %}
-        <p>{{ order.products.name }}</p>
-        <p>по цене:</p>
-        <p>{{ order.all_price }}</p>
+        {% for product in order.products.all %}
+            <p>{{ product.name }}</p>
+            <p>по цене:</p>
+            <p>{{ product.price | linebreaks}}</p>
+            {% if product.photo %}
+                <p><img class="img-article-left" src="{{product.photo.url}}"></p>
+            {% endif %}
+        {% endfor %}
     {% endfor %}
 </ul>
-<!--    <h1>Имя товара: {{pr.products.name}}</h1>-->
-<!--    <h1>Описание: {{pr.products.descriptions}}</h1>-->
-<!--    <h1>Цена: {{pr.price}}</h1>-->
-<!--    <h1>Дата добавления: {{pr.date}}</h1>-->
-<!--    <h1>-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;</h1>-->
-{% if pr.photo %}
-<p><img class="img-article-left" src="{{pr.photo.url}}"></p>
-{% endif %}
+
 
 
 {% endblock %}
