@@ -1,0 +1,4 @@
+/media/
+*.sqlit3
+*.log
+*.pyc
