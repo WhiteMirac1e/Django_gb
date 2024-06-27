@@ -45,12 +45,12 @@ def user_products(request, user_id):
     return render(request, "myapp/user_products.html", context)
 
 
-def add_product(request, user_id):
+def add_product(request):
     if request.method == 'POST':
         form = ProductForm(request.POST, request.FILES)
         if form.is_valid():
             Product.objects.create(**form.cleaned_data)
-            return redirect('show_product', user_id=user_id)
+            return redirect('index')
     else:
         form = ProductForm()
 
