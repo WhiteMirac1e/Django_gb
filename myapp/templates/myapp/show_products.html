@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+<h1>Список заказов</h1>
+<ul>
+    <h1>{{ user.name }} </h1>
+        <p> заказал: </p>
+    {% for order in orders %}
+        {% for product in order.products.all %}
+            <p>{{ product.name }}</p>
+            <p>по цене:</p>
+            <p>{{ product.price | linebreaks}}</p>
+            {% if product.photo %}
+                <p><img class="img-article-left" src="{{product.photo.url}}"></p>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+</ul>
+
+
+
+{% endblock %}

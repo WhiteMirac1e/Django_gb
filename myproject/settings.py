@@ -19,14 +19,20 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/5.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-bur_y0*k23*lxteb=3mexc1e*=c66^hzesx5p=-94+8x#=s%0s'
+import os
+
+SECRET_KEY = os.getenv('SECRET_KEY')
+# SECRET_KEY = 'django-insecure-m+a_w+cthb^x0hdgwt)4_!d%m^n)s4@j*96)*mr9+zy%m1$s_1'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+SESSION_COOKIE_SECURE = True
+CSRF_COOKIE_SECURE = True
 
 ALLOWED_HOSTS = [
     '127.0.0.1',
     '192.168.56.1',
+    'WhiteMiracle.pythonanywhere.com',
 ]
 
 # Application definition
@@ -80,7 +86,15 @@ WSGI_APPLICATION = 'myproject.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        # 'NAME': BASE_DIR / 'db.sqlite3',
+        'NAME': 'WhiteMiracle$default',
+        'USER': 'WhiteMiracle',
+        'PASSWORD': os.getenv('MYSQL_PASSWORD'),
+        'HOST': 'WhiteMiracle.mysql.pythonanywhere-services.com',
+        'OPTIONS': {
+            'init_command': "SET NAMES 'utf8mb4';SET sql_mode='STRICT_TRANS_TABLES'",
+            'charset': 'utf8mb4',
+        },
     }
 }
 
@@ -117,6 +131,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.0/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = BASE_DIR / 'static/'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = BASE_DIR / 'media'

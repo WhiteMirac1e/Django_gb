@@ -17,10 +17,10 @@ class User(models.Model):
 class Product(models.Model):
     name = models.CharField(max_length=30, verbose_name='Название товара')
     descriptions = models.TextField(null=True, verbose_name='Описание товара')
-    price = models.DecimalField(max_digits=8, decimal_places=2, verbose_name=' Цена товара')
-    count = models.IntegerField(verbose_name='Количество товара')
+    price = models.DecimalField(max_digits=8, decimal_places=2, validators=[MinValueValidator(0)], verbose_name='Цена товара')
+    count = models.PositiveIntegerField(default=0, verbose_name='Количество товара')
     date = models.DateTimeField(auto_now_add=True, verbose_name='Дата добавленяе товара')
-    photo = models.ImageField(upload_to='products_photo/', null=True, blank=True)
+    photo = models.ImageField(upload_to='products_photo/', null=True, blank=True, verbose_name='Фотография')
 
     def __str__(self):
         return f'Name is {self.name}'
